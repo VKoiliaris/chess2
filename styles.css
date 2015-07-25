@@ -1,0 +1,21 @@
+ td {
+ 	width:110px;
+	height:110px;
+	border:1px silver solid;
+	text-align:center;
+	font-size:75px;
+}
+table tr:nth-child(odd) td:nth-child(even) {
+  background: #808080;
+}
+table tr:nth-child(even) td:nth-child(odd) {
+  background: #808080;
+}
+
+.selected {
+	color: red;
+}
+
+.promotions {
+	font-size:75px;
+}
