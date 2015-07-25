@@ -1,0 +1,32 @@
+<div ng-controller = "ChessboardCtrl">
+<button ng-click= "init()">Start Game</button>
+<div ng-show = "appReady">
+<button ng-click = "$root.currentUser._id; newGame()">New Game</button>
+<button ng-click = "unDo()">Undo</button>
+<div class = "promotions row" ng-show="blackPawnPromotion">
+	<div class= "col-md-2"></div>
+	<div class= "col-md-1" ng-click= "promote('br')">&#9820;</div>
+	<div class= "col-md-1" ng-click= "promote('bn')">&#9822;</div>
+	<div class= "col-md-1" ng-click= "promote('bb')">&#9821;</div>
+	<div class= "col-md-1" ng-click= "promote('bq')">&#9819;</div>
+</div>
+<table class = "board">
+	<tr ng-repeat = "row in rows">
+		<td ng-repeat = "column in columns" ng-click = "interactWithBoard(row, column)" ng-class="{selected: (row == chosenRow) && (column == chosenColumn) && chosen}">
+
+			{{images(row, column)}}
+		</td>
+
+	</tr>
+</table>
+<div class = "promotions row" ng-show="whitePawnPromotion">
+	<div class= "col-md-2"></div>
+	<div class= "col-md-1" ng-click= "promote('wr')">&#9814;</div>
+	<div class= "col-md-1" ng-click= "promote('wn')">&#9816;</div>
+	<div class= "col-md-1" ng-click= "promote('wb')">&#9815;</div>
+	<div class= "col-md-1" ng-click= "promote('wq')">&#9813;</div>
+</div>
+</div>
+{{boards}}
+
+</div>

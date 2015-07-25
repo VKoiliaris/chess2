@@ -10,3 +10,4 @@ urigo:angular
 twbs:bootstrap
 accounts-password
 accounts-ui
+angularui:angular-ui-router
