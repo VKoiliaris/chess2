@@ -1,0 +1,21 @@
+<div ng-controller = "entryCtrl">
+	<p>
+		Issue a Challenge or start a practice game.
+	</p>
+
+	<button ng-click= "challenge($root.currentUser._id, $root.currentUser.emails[0].address)">Chalenge</button>
+
+	<button ng-click= "practice($root.currentUser._id)">Practice</button>
+
+	<h3>Challenges</h3>
+	<ul ng-repeat="challenge in challenges()">
+		<li>
+			<h4> {{challenge.challenger}} has issued a challenge!</h4>
+			<button ng-click="acceptChallenge($root.currentUser._id, challenge)">Accept
+			</button>
+		</li>
+	</ul>
+
+
+
+</div>
