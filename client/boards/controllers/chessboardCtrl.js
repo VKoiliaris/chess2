@@ -422,6 +422,3 @@ angular.module('chess2').controller('ChessboardCtrl', ['$scope', '$meteor',
 		};
 	}]);
 
-
-
-alexandrosbasakidis@agileactors.com
